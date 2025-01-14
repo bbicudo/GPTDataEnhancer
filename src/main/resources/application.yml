@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: GPT Data Enhancer
+  # Default configuration for production.  
+  config:
+    activate:
+      on-profile: default
+  datasource:
+    url: jdbc:mysql://${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}?useTimezone=true&serverTimezone=UTC
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
