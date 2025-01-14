@@ -21,7 +21,24 @@ services:
     volumes:
       - /home/brunobb/GPTDataEnhancer:/app
     working_dir: /app
-    command: /bin/bash -c "mvn clean install spring-boot:run -X"
+    command: mvn spring-boot:run -X
+    restart: always
+
+  clean_install:
+    build:
+      context: .
+    volumes:
+      - /home/brunobb/GPTDataEnhancer:/app
+    working_dir: /app
+    command: mvn clean install
+
+  restart:
+    build:
+      context: .
+    volumes:
+      - /home/brunobb/GPTDataEnhancer:/app
+    working_dir: /app
+    command: mvn spring-boot:run -X
 
   mysql:
     image: mysql:8.0
