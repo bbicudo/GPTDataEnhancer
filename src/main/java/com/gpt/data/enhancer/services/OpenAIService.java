@@ -11,7 +11,7 @@ import com.gpt.data.enhancer.models.Data;
 @Service
 public class OpenAIService extends AIServiceBase{
 
-	@Override
+    @Override
     protected String getApiUrl() {
         return System.getenv("OPENAI_API_URL");
 	}
