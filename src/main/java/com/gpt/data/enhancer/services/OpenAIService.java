@@ -14,7 +14,7 @@ public class OpenAIService extends AIServiceBase{
     @Override
     protected String getApiUrl() {
         return System.getenv("OPENAI_API_URL");
-	}
+    }
 
     @Override
     protected String getApiKey() {
