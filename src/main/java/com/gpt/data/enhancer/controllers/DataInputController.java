@@ -18,8 +18,8 @@ public class DataInputController {
 
 	@PostMapping
 	public String inpuData(
-		@RequestBody Data data
+	    @RequestBody Data data
 	) throws Exception {
-		return service.sendPrompt(data);
+	    return service.sendPrompt(data);
 	}
 }
